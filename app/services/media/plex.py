@@ -408,7 +408,6 @@ class PlexClient(MediaClient):
                                 break
 
                 video_codec = audio_codec = container = video_resolution = None
-                # media_list was already retrieved above for transcoding detection
                 if media_list:
                     media_obj = media_list[0]
                     video_codec = getattr(media_obj, "videoCodec", None)
