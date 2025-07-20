@@ -39,7 +39,7 @@ jobs:
     
     - name: Check YAML files
       run: |
-        python -c "
+        uv run python -c "
         import yaml
         import glob
         import sys
