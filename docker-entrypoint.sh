@@ -30,7 +30,7 @@ if [ "$(id -u)" = "0" ]; then
     useradd -g "$TARGET_GRP" -u "$PUID" -M -N "$TARGET_USER" || true
   else
     # Make sure the existing user is in the right group
-    usermod -g "$TARGET_GRP" "$EXISTING_USER" || true
+    usermod -a -G "$TARGET_GRP" "$EXISTING_USER" || true
   fi
 
   # Only recurse into the truly live dirs
